@@ -13,5 +13,6 @@ public class HandGunPickup : MonoBehaviour
         realHandgun.SetActive(true);
         pickupHandgun.SetActive(false);
         handgunPickupSound.Play();
+        GetComponent<BoxCollider>().enabled = false;
     }
 }
