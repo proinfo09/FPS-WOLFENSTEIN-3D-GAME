@@ -18,5 +18,6 @@ public class GoldCollect : MonoBehaviour
         pickUpDisplay.SetActive(false);
         pickUpDisplay.GetComponent<Text>().text ="GOLD IGNOT";
         pickUpDisplay.SetActive(true);
+        GlobalCompleted.treasureCount += 1;
     }
 }

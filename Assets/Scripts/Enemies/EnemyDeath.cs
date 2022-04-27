@@ -25,6 +25,7 @@ public class EnemyDeath : MonoBehaviour
             theEnemy.GetComponent<LookPlayer>().enabled = false;
             this.GetComponent<BoxCollider>().isTrigger = true;
             GlobalScore.scoreValue += 100;
+            GlobalCompleted.enemyCount += 1;
         }
     }
 }
