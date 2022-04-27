@@ -7,6 +7,7 @@ public class EnemyDeath : MonoBehaviour
     public int enemyHeath = 20;
     public bool enemyDead = false;
     public GameObject enemyAI;
+    public GameObject theEnemy;
 
     void DamageEnemy (int damageAmount)
     {
@@ -19,8 +20,10 @@ public class EnemyDeath : MonoBehaviour
         if(enemyHeath <= 0 && enemyDead == false)
         {
             enemyDead = true;
-            this.GetComponent<Animator>().Play("Death");
+            theEnemy.GetComponent<Animator>().Play("Death");
             enemyAI.SetActive(false);
+            theEnemy.GetComponent<LookPlayer>().enabled = false;
+            this.GetComponent<BoxCollider>().isTrigger = true;
         }
     }
 }
