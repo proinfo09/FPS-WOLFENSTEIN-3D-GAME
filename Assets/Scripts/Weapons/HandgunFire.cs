@@ -8,6 +8,8 @@ public class HandgunFire : MonoBehaviour
     public GameObject muzzleFlash;
     public AudioSource gunFire, emptySound;
     public bool isFiring = false;
+    public float targetDistance;
+    public int damageAmount = 5;
 
     // Update is called once per frame
     void Update()
@@ -30,11 +32,18 @@ public class HandgunFire : MonoBehaviour
 
     IEnumerator FiringHandgun()
     {
+        RaycastHit theShot;
         isFiring = true;
         GlobaAmmo.handgunAmmo -= 1;
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out theShot))
+        {
+            targetDistance = theShot.distance;
+            theShot.transform.SendMessage("DamageEnemy", damageAmount, SendMessageOptions.DontRequireReceiver);
+        }
         theGun.GetComponent<Animator>().Play("HandgunFire");
         muzzleFlash.SetActive(true);
         gunFire.Play();
+
         yield return new WaitForSeconds(0.05f);
         muzzleFlash.SetActive(false);
         yield return new WaitForSeconds(0.25f);
