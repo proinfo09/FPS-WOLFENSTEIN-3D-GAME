@@ -1120,6 +1120,8 @@ MonoBehaviour:
   gunFire: {fileID: 796881066}
   emptySound: {fileID: 88507844}
   isFiring: 0
+  targetDistance: 0
+  damageAmount: 5
 --- !u!95 &151294435
 Animator:
   serializedVersion: 3
@@ -8400,6 +8402,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayer: {fileID: 1239977544}
+--- !u!114 &1262338420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262338417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b770cace1c43a24889aa7c596dde808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHeath: 20
+  enemyDead: 0
+  enemyAI: {fileID: 1262338417}
 --- !u!1 &1275205832
 GameObject:
   m_ObjectHideFlags: 0
