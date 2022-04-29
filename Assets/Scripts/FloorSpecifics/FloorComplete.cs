@@ -29,7 +29,7 @@ public class FloorComplete : MonoBehaviour
         PlayerPrefs.SetInt("AmmoSaved", GlobaAmmo.handgunAmmo);
         yield return new WaitForSeconds(2);
         completePanel.SetActive(true);
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(5);
         GlobalScore.scoreValue = 0;
         GlobalCompleted.enemyCount = 0;
         GlobalCompleted.treasureCount = 0;

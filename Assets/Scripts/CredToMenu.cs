@@ -13,7 +13,7 @@ public class CredToMenu : MonoBehaviour
 
     IEnumerator BackToMenu()
     {
-        yield return new WaitForSeconds(11);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(3);
     }
 }
