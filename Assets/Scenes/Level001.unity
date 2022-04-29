@@ -8281,7 +8281,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514783600}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8366,7 +8366,6 @@ MonoBehaviour:
   completePanel: {fileID: 393499258}
   thePlayer: {fileID: 1909939042}
   floorTimer: {fileID: 2125131259}
-  nextScene: Level002
 --- !u!1 &522631978
 GameObject:
   m_ObjectHideFlags: 0

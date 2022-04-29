@@ -10,7 +10,7 @@ public class FloorComplete : MonoBehaviour
     public GameObject completePanel;
     public GameObject thePlayer;
     public GameObject floorTimer;
-    public string nextScene;
+    //public string nextScene;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,13 +23,18 @@ public class FloorComplete : MonoBehaviour
     IEnumerator CompletedFloor()
     {
         fadeOut.SetActive(true);
+        PlayerPrefs.SetInt("SceneToLoad", GlobalCompleted.nextFloor);
+        PlayerPrefs.SetInt("LivesSaved", GlobalLife.lifeValue);
+        PlayerPrefs.SetInt("ScoreSaved", GlobalScore.scoreValue);
+        PlayerPrefs.SetInt("AmmoSaved", GlobaAmmo.handgunAmmo);
         yield return new WaitForSeconds(2);
         completePanel.SetActive(true);
         yield return new WaitForSeconds(15);
         GlobalScore.scoreValue = 0;
         GlobalCompleted.enemyCount = 0;
         GlobalCompleted.treasureCount = 0;
-        SceneManager.LoadScene(nextScene);
+        GlobalCompleted.nextFloor += 1;
+        SceneManager.LoadScene(GlobalCompleted.nextFloor);
     }
 }
 
