@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandgunFire : MonoBehaviour
+public class M4A1Fire : MonoBehaviour
 {
     public GameObject theGun;
     public GameObject muzzleFlash;
@@ -13,12 +13,11 @@ public class HandgunFire : MonoBehaviour
     public float fireRate;
     public string fireAnim;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if(GlobaAmmo.handgunAmmo < 1)
+            if (GlobaAmmo.handgunAmmo < 1)
             {
                 emptySound.Play();
             }
@@ -37,7 +36,7 @@ public class HandgunFire : MonoBehaviour
         RaycastHit theShot;
         isFiring = true;
         GlobaAmmo.handgunAmmo -= 1;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out theShot))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out theShot))
         {
             targetDistance = theShot.distance;
             theShot.transform.SendMessage("DamageEnemy", damageAmount, SendMessageOptions.DontRequireReceiver);
