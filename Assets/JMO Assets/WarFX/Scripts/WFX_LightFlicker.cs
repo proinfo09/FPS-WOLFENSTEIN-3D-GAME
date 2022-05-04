@@ -14,25 +14,15 @@ public class WFX_LightFlicker : MonoBehaviour
 	
 	private float timer;
 	
-	void Start ()
+	void Update ()
 	{
-		timer = time;
-		StartCoroutine("Flicker");
-	}
-	
-	IEnumerator Flicker()
-	{
-		while(true)
+		if (M4A1Fire.instance.isFiring)
 		{
-			GetComponent<Light>().enabled = !GetComponent<Light>().enabled;
-			
-			do
-			{
-				timer -= Time.deltaTime;
-				yield return null;
-			}
-			while(timer > 0);
-			timer = time;
+			GetComponent<Light>().enabled = true;
+		}
+		else
+		{
+			GetComponent<Light>().enabled = false;
 		}
 	}
 }
