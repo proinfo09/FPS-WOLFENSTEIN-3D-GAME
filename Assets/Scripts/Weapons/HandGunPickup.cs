@@ -5,12 +5,18 @@ using UnityEngine.UI;
 
 public class HandGunPickup : MonoBehaviour
 {
+    public static HandGunPickup instance;
     public GameObject realHandgun;
     public GameObject pickupHandgun;
     public AudioSource handgunPickupSound;
     public GameObject pickUpDisplay;
     public GameObject pistolImage;
     public string pickupNote;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -21,6 +27,8 @@ public class HandGunPickup : MonoBehaviour
         pickUpDisplay.SetActive(false);
         pickUpDisplay.GetComponent<Text>().text = pickupNote;
         pickUpDisplay.SetActive(true);
-        pistolImage.SetActive(true);
+        GlobalGun.instance.availableGuns.Add(realHandgun);
+        GlobalGun.instance.currentGun = GlobalGun.instance.availableGuns.Count - 1;
+        GlobalGun.instance.SwitchGun();
     }
 }

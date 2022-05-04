@@ -3637,6 +3637,7 @@ GameObject:
   - component: {fileID: 246638015}
   - component: {fileID: 246638016}
   - component: {fileID: 246638017}
+  - component: {fileID: 246638018}
   m_Layer: 0
   m_Name: GlobalContainerObject
   m_TagString: Untagged
@@ -3720,6 +3721,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDisplay: {fileID: 251078591}
   treasureDisplay: {fileID: 258988421}
+--- !u!114 &246638018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246638012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30349792ca9fb045b8570727ee9a575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableGuns: []
+  currentGun: 0
 --- !u!1001 &247354019
 PrefabInstance:
   m_ObjectHideFlags: 0
