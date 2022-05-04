@@ -1381,7 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88507843}
   - component: {fileID: 88507844}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AmmoEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,7 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127951141}
   - component: {fileID: 127951142}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hurt 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,18 +2578,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 151294431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4fe49a8898afda4782a5163fbb18350, type: 3}
+  m_Script: {fileID: 11500000, guid: de30e083ce51c0c478ba9cc81a2881f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theGun: {fileID: 151294431}
-  muzzleFlash: {fileID: 1085984198}
+  muzzleFlash: {fileID: 986702040}
   gunFire: {fileID: 796881066}
   emptySound: {fileID: 88507844}
   isFiring: 0
   targetDistance: 0
   damageAmount: 5
-  fireRate: 0.25
+  fireRate: 1
   fireAnim: HandgunFire
+  gunImage: {fileID: 840772667}
+  impactEffect: {fileID: 100002, guid: f04e15e9b0b32f24b9e87868e8bfbeea, type: 3}
 --- !u!95 &151294435
 Animator:
   serializedVersion: 3
@@ -4485,7 +4487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287987732}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7835,7 +7837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473260196}
   - component: {fileID: 473260197}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hurt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8132,7 +8134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494063684}
   - component: {fileID: 494063685}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 'Life Sound '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9772,7 +9774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 605148812}
   - component: {fileID: 605148813}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12563,7 +12565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766016155}
   - component: {fileID: 766016156}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hurt 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13404,7 +13406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 796881065}
   - component: {fileID: 796881066}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HandgunFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13626,6 +13628,8 @@ MonoBehaviour:
   damageAmount: 10
   fireRate: 0.1
   fireAnim: M4A1_fire
+  gunImage: {fileID: 143393898}
+  impactEffect: {fileID: 100002, guid: 556d09d7fda29fd4185eed4067d5777b, type: 3}
 --- !u!95 &811784761
 Animator:
   serializedVersion: 3
@@ -13751,7 +13755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820491813}
   - component: {fileID: 820491814}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HandgunPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15994,9 +15998,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 811784759}
     m_Modifications:
+    - target: {fileID: 100000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
       propertyPath: m_Name
       value: WFX_MF FPS RIFLE1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
       propertyPath: m_IsActive
@@ -16635,7 +16655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962325800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17098,6 +17118,144 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f61e2c06933fe5145a42eccb1e13acc7, type: 3}
   m_PrefabInstance: {fileID: 980454221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &986702039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 151294432}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Name
+      value: WFX_MF FPS RIFLE1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12.499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12.499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0058971797
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1.7574987e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99998266
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000002980184
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+--- !u!198 &986702040 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800004, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+  m_PrefabInstance: {fileID: 986702039}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &990113829
 GameObject:
@@ -19401,7 +19559,7 @@ GameObject:
   - component: {fileID: 1085984202}
   - component: {fileID: 1085984201}
   - component: {fileID: 1085984200}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: MuzzelFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20261,7 +20419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135628741}
   - component: {fileID: 1135628742}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Casting Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21674,7 +21832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200733622}
   - component: {fileID: 1200733623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DoorSlide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22502,7 +22660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239977544}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Target Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24145,7 +24303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307550126}
   - component: {fileID: 1307550127}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AmmoPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28612,7 +28770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577053263}
   - component: {fileID: 1577053264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collect Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31268,7 +31426,7 @@ GameObject:
   - component: {fileID: 1749487264}
   - component: {fileID: 1749487266}
   - component: {fileID: 1749487265}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31296,7 +31454,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749487263}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1749487266
 Camera:
   m_ObjectHideFlags: 0
@@ -31479,7 +31637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784632943}
   - component: {fileID: 1784632944}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eat Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33688,8 +33846,16 @@ PrefabInstance:
       value: FPSController
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
@@ -35059,7 +35225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972360356}
   - component: {fileID: 1972360357}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Floor01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35989,7 +36155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Name
@@ -35997,7 +36163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_IsActive
@@ -36005,15 +36171,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6f8ee9e57f0ae87429c40e77c8b75822, type: 3}
       propertyPath: m_RootOrder
@@ -37145,9 +37311,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
       propertyPath: m_Name
       value: M4A1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
       propertyPath: m_IsActive
@@ -37452,7 +37626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097389800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}

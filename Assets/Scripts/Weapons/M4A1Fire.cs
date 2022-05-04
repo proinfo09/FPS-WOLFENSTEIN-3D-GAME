@@ -13,6 +13,8 @@ public class M4A1Fire : MonoBehaviour
     public int damageAmount = 5;
     public float fireRate;
     public string fireAnim;
+    public GameObject gunImage;
+    public GameObject impactEffect;
 
     private void Awake()
     {
@@ -46,6 +48,8 @@ public class M4A1Fire : MonoBehaviour
         {
             targetDistance = theShot.distance;
             theShot.transform.SendMessage("DamageEnemy", damageAmount, SendMessageOptions.DontRequireReceiver);
+            Debug.Log(theShot.collider);
+            Instantiate(impactEffect, theShot.point, theShot.transform.rotation);
         }
         theGun.GetComponent<Animator>().Play(fireAnim);
         muzzleFlash.Play();

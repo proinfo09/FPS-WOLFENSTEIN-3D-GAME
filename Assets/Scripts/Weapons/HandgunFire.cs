@@ -12,6 +12,7 @@ public class HandgunFire : MonoBehaviour
     public int damageAmount = 5;
     public float fireRate;
     public string fireAnim;
+    public GameObject gunImage;
 
     // Update is called once per frame
     void Update()

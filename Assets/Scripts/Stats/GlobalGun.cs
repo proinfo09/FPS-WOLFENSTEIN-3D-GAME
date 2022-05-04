@@ -46,8 +46,9 @@ public class GlobalGun : MonoBehaviour
         foreach (GameObject theGun in availableGuns)
         {
             theGun.gameObject.SetActive(false);
+            theGun.GetComponent<M4A1Fire>().gunImage.SetActive(false);
         }
         availableGuns[currentGun].gameObject.SetActive(true);
-        HandGunPickup.instance.pistolImage.SetActive(true);
+        availableGuns[currentGun].GetComponent<M4A1Fire>().gunImage.SetActive(true);
     }
 }
