@@ -21,7 +21,7 @@ public class M4A1Fire : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
             if (GlobaAmmo.handgunAmmo < 1)
             {
